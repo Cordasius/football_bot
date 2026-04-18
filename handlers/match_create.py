@@ -13,7 +13,7 @@ router = Router()
 def parse_new_match_args(args: str) -> tuple[str, str, str, str]:
     """
     Ожидаем строку вида:
-    '<место>; <дата>; <время>; <формат>'
+    'место; дата; время; формат'
     Например: 'Манеж Динамо; 25.04; 19:00; 8x8'
     """
     parts = [p.strip() for p in args.split(";")]
@@ -46,7 +46,7 @@ async def cmd_new_match(message: Message, command: CommandObject):
     if not command.args:
         await message.answer(
             "Укажи параметры матча в одной строке через ';':\n"
-            "/new_match <место>; <дата>; <время>; <формат>\n"
+            "/new_match место; дата; время; формат\n"
             "Например:\n"
             "/new_match Манеж Динамо; 25.04; 19:00; 8x8"
         )

@@ -7,7 +7,7 @@ from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from aiogram.fsm.storage.memory import MemoryStorage
 
-from config import BOT_TOKEN, LOG_LEVEL
+from config import BOT_TOKEN
 from handlers.common import router as common_router
 from handlers.match_create import router as match_create_router
 from handlers.match_status import router as match_status_router
